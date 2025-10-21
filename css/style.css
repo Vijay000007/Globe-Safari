@@ -217,15 +217,11 @@ footer a {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #0A2540;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    width: 200px;
-    display: none;
+  .image-grid img {
+    width: 100%;
+    max-width: 300px;
   }
+}
 
   .nav-links.show {
     display: flex;
