@@ -38,7 +38,7 @@ a {
 }
 
 .logo img {
-  height: 200px; /* Increased logo size */
+  height: 400px; /* Increased logo size */
   width: auto;
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* Optional: adds subtle contrast */
 }
