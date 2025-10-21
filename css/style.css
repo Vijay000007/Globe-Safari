@@ -22,41 +22,42 @@ a {
   color: inherit;
 }
 
-/* Navigation */
-/* Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  background-color: #ffffff; /* White background */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for separation */
+/* Logo Header */
+.logo-header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #ffffff;
 }
 
-.logo img {
-  height: 400px; /* Increased logo size */
+.logo-header img {
+  height: 120px; /* Adjust as needed */
   width: auto;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* Optional: adds subtle contrast */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav-links a {
-  color: #000000; /* Black text */
+  color: #000000;
   font-weight: bold;
+  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #E85C2B; /* Optional: orange accent on hover */
+  color: #E85C2B;
 }
 
 .logo img {
