@@ -3,40 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Destinations | GlobeSafari</title>
+  <title>GlobeSafari | Curated Travel Experiences</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-banner" style="background-image: url('images/destinations-banner.jpg');">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="GlobeSafari Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leisure.html">Leisure</a></li>
+      <li><a href="corporate.html">Corporate</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
     <div class="overlay">
-      <h1>Explore Our Destinations</h1>
-      <p>Handpicked locations for leisure and business travel</p>
+      <div class="hero-text">
+        <h1>Your Journey, Our Expertise</h1>
+        <p>Curated travel for the discerning explorer</p>
+        <a href="contact.html" class="btn">Get a Quote</a>
+      </div>
     </div>
   </header>
 
-  <section class="destinations-list">
-    <div class="destination-card">
-      <img src="images/paris.jpg" alt="Paris" />
-      <h3>Paris, France</h3>
-      <p>Romance, art, and timeless elegance.</p>
-      <a href="paris-itinerary.html" class="btn">View Itinerary</a>
+  <!-- About GlobeSafari -->
+  <section class="intro">
+    <h2>Why GlobeSafari?</h2>
+    <p>We’re a Pune-based travel company trusted by global clients for leisure and corporate travel. From honeymoons to MICE, we deliver seamless, personalized experiences with 24/7 support.</p>
+  </section>
+
+  <!-- Packages -->
+  <section class="features">
+    <div class="feature">
+      <h3>Leisure Packages</h3>
+      <p>Romantic escapes, family holidays, and adventure tours.</p>
     </div>
-    <div class="destination-card">
-      <img src="images/dubai.jpg" alt="Dubai" />
-      <h3>Dubai, UAE</h3>
-      <p>Luxury, innovation, and desert adventures.</p>
-      <a href="dubai-itinerary.html" class="btn">View Itinerary</a>
+    <div class="feature">
+      <h3>Corporate Travel</h3>
+      <p>End-to-end business travel with cost control and concierge support.</p>
     </div>
-    <div class="destination-card">
-      <img src="images/thailand.jpg" alt="Thailand" />
-      <h3>Thailand</h3>
-      <p>Beaches, temples, and vibrant street life.</p>
-      <a href="thailand-itinerary.html" class="btn">View Itinerary</a>
+    <div class="feature">
+      <h3>Custom Itineraries</h3>
+      <p>Tailored plans for your dream destinations and events.</p>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <!-- Destinations -->
+  <section class="destinations-list">
+    <h2>Popular Destinations</h2>
+    <div class="destination-grid">
+      <div class="destination-card">
+        <img src="images/paris.jpg" alt="Paris" />
+        <h3>Paris, France</h3>
+        <a href="paris-itinerary.html" class="btn">View Itinerary</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/dubai.jpg" alt="Dubai" />
+        <h3>Dubai, UAE</h3>
+        <a href="dubai-itinerary.html" class="btn">View Itinerary</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/thailand.jpg" alt="Thailand" />
+        <h3>Thailand</h3>
+        <a href="thailand-itinerary.html" class="btn">View Itinerary</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/swiss.jpg" alt="Switzerland" />
+        <h3>Switzerland</h3>
+        <a href="swiss-itinerary.html" class="btn">View Itinerary</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/bali.jpg" alt="Bali" />
+        <h3>Bali, Indonesia</h3>
+        <a href="bali-itinerary.html" class="btn">View Itinerary</a>
+      </div>
+      <div class="destination-card">
+        <img src="images/kenya.jpg" alt="Kenya" />
+        <h3>Kenya Safari</h3>
+        <a href="kenya-itinerary.html" class="btn">
