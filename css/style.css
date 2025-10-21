@@ -12,7 +12,7 @@
 }
 
 .logo-left img {
-  height: 120px;
+  height: 80px;
   width: auto;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .nav-links a {
-  color: #000000;
+  color: #000000 !important; /* Force black text */
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
