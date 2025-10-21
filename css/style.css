@@ -217,10 +217,10 @@ footer a {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 280px) {
   .image-grid img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
   }
 }
 
