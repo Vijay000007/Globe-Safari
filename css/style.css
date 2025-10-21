@@ -1,131 +1,91 @@
-/* Base Styles */
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+/* Header Layout */
+.main-header {
   background-color: #ffffff;
-  color: #0A2540;
-  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5rem 2rem;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 0.5rem;
-  color: #0A2540;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
-  margin-bottom: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Logo Header */
-.logo-header {
-  text-align: center;
-  padding: 1rem 0;
-  background-color: #ffffff;
-}
-
-.logo-header img {
-  height: 120px; /* Adjust as needed */
+.logo-left img {
+  height: 120px;
   width: auto;
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
-  display: flex;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-grow: 1;
+  text-align: right;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: #000000; /* Black text */
+  color: #000000;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #E85C2B; /* Optional: orange accent on hover */
-}
-
-.logo img {
-  height: 200px; /* Reduced from 100px */
-  width: auto;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4)); /* Makes logo stand out */
-}
-
-.nav-links a {
-  color: #ffffff;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #FFD700; /* Gold accent on hover */
+  color: #E85C2B;
 }
 
 /* Hero Section */
 .hero {
-  background: url('../images/luxury-hero.jpg') center/cover no-repeat;
-  height: 100vh;
-  position: relative;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  position: relative;
+  color: #ffffff;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
-  width: 100%;
-  height: 100%;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-text p {
   font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* Buttons */
 .btn {
-  background-color: #F4C542;
-  color: #0A2540;
+  background-color: #E85C2B;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e0b835;
+  background-color: #c94e24;
 }
 
-/* Sections */
-section {
-  padding: 3rem 2rem;
+/* Intro & Features */
+.intro, .features {
+  padding: 2rem;
   text-align: center;
 }
 
@@ -137,69 +97,44 @@ section {
 }
 
 .feature {
-  max-width: 300px;
-  padding: 1rem;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 280px;
 }
 
-/* Destinations */
+/* Destination Grid */
 .destinations-list {
-  padding: 3rem 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .destination-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .destination-card {
-  width: 280px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
   transition: transform 0.3s ease;
 }
 
 .destination-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
 .destination-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 .destination-card h3 {
   margin-bottom: 0.5rem;
-}
-
-.destination-card .btn {
-  margin-top: 0.5rem;
-}
-
-/* CTA Banner */
-.cta-banner {
-  background-color: #0A2540;
-  color: #ffffff;
-  padding: 2rem;
-}
-
-.cta-banner h2 {
-  margin-bottom: 1rem;
-}
-
-.cta-banner .btn {
-  background-color: #F4C542;
-  color: #0A2540;
-  margin: 0.5rem;
+  font-size: 1.2rem;
 }
 
 /* Footer */
@@ -212,33 +147,6 @@ footer {
 }
 
 footer a {
-  color: #F4C542;
+  color: #ffffff;
   text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 280px) {
-  .image-grid img {
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .features,
-  .destination-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
 }
