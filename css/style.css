@@ -24,15 +24,7 @@ a {
 
 /* Navigation */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #FF7F50; /* Coral orange */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  background-color: #FF7F50 !important; /* Force override */
 }
 
 .logo img {
