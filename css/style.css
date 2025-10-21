@@ -23,17 +23,40 @@ a {
 }
 
 /* Navigation */
+/* Navigation */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem; /* Reduced height */
-  background-color: #E85C2B; /* New background */
+  padding: 0.5rem 2rem;
+  background-color: #ffffff; /* White background */
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for separation */
+}
+
+.logo img {
+  height: 200px; /* Increased logo size */
+  width: auto;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* Optional: adds subtle contrast */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #000000; /* Black text */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #E85C2B; /* Optional: orange accent on hover */
 }
 
 .logo img {
