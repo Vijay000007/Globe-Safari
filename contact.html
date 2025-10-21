@@ -5,39 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | GlobeSafari</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
-    <h1>Talk to a Travel Expert</h1>
-    <p>We’re here to help you plan your next journey — with care, clarity, and expertise.</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo.png" alt="GlobeSafari Logo" /></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leisure.html">Leisure</a></li>
+      <li><a href="corporate.html">Corporate</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner -->
+  <header class="page-banner" style="background-image: url('images/contact-banner.jpg');">
+    <div class="overlay">
+      <h1>Contact GlobeSafari</h1>
+      <p>We’re here to help — anytime, anywhere</p>
+    </div>
   </header>
 
+  <!-- Contact Info -->
+  <section class="intro">
+    <h2>Reach Out</h2>
+    <p>Whether you're planning a trip or need urgent travel support, our team is available 24/7. Call, email, or message us directly.</p>
+    <p>
+      📍 Baner, Pune, Maharashtra, India<br>
+      📞 <a href="tel:+918855088738">+91 88550 88738</a><br>
+      📧 <a href="mailto:sales@globesafari.in">sales@globesafari.in</a><br>
+      💬 <a href="https://wa.me/918855088738">Chat on WhatsApp</a>
+    </p>
+  </section>
+
+  <!-- Contact Form -->
   <section class="contact-form">
+    <h2>Send Us a Message</h2>
     <form action="mailto:sales@globesafari.in" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="email" name="Email" placeholder="Your Email" required />
-      <textarea name="Message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Submit</button>
     </form>
   </section>
 
-  <section class="contact-details">
-    <h2>Contact Information</h2>
-    <p><strong>📞 Phone:</strong> <a href="tel:+918855088738">+91 88550 88738</a></p>
-    <p><strong>📧 Email:</strong> <a href="mailto:sales@globesafari.in">sales@globesafari.in</a></p>
-    <p><strong>📍 Office:</strong> Baner, Pune, Maharashtra, India</p>
-    <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/918855088738">Chat on WhatsApp</a></p>
-    <p><strong>📍 Map:</strong></p>
-    <iframe src="https://maps.google.com/maps?q=Baner,Pune&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen></iframe>
-  </section>
-
+  <!-- CTA -->
   <section class="cta-banner">
-    <h2>Prefer a quick call?</h2>
-    <a href="tel:+918855088738" class="btn">Call Now</a>
+    <h2>Need a Custom Itinerary?</h2>
+    <a href="contact.html" class="btn">Get a Quote</a>
+    <a href="contact.html" class="btn">Book a Demo</a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
+    <p>
+      📍 Baner, Pune, Maharashtra, India &nbsp;|&nbsp;
+      📞 <a href="tel:+918855088738">+91 88550 88738</a> &nbsp;|&nbsp;
+      📧 <a href="mailto:sales@globesafari.in">sales@globesafari.in</a>
+    </p>
   </footer>
 </body>
 </html>
