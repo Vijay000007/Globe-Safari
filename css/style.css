@@ -60,7 +60,7 @@ a {
 }
 
 .logo img {
-  height: 60px; /* Reduced from 100px */
+  height: 200px; /* Reduced from 100px */
   width: auto;
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.4)); /* Makes logo stand out */
 }
