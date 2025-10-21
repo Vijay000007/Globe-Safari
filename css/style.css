@@ -50,14 +50,14 @@ a {
 }
 
 .nav-links a {
-  color: #000000;
+  color: #000000; /* Black text */
   font-weight: bold;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #E85C2B;
+  color: #E85C2B; /* Optional: orange accent on hover */
 }
 
 .logo img {
