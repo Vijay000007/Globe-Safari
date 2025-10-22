@@ -3,83 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Popular Destinations | GlobeSafari</title>
+  <title>Destinations | GlobeSafari</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="GlobeSafari Logo" />
-      </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="leisure.html">Leisure</a></li>
-      <li><a href="corporate.html">Corporate</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Banner -->
-  <header class="page-banner" style="background-image: url('images/destinations-banner.jpg');">
-    <div class="overlay">
-      <h1>Explore the World</h1>
-      <p>Handpicked destinations for every kind of traveler</p>
+  <a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank">
+    <img src="assets/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
+
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-left">
+        <a href="index.html"><img src="assets/logo.png" alt="GlobeSafari Logo" /></a>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="leisure.html">Leisure</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Destination Grid -->
-  <section class="destinations-list">
-    <h2>Popular Destinations</h2>
-    <div class="destination-grid">
-      <!-- Asia -->
-      <div class="destination-card"><img src="images/vietnam.jpg" alt="Vietnam" /><h3>Vietnam</h3><a href="vietnam-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/philippines.jpg" alt="Philippines" /><h3>Philippines</h3><a href="philippines-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/thailand.jpg" alt="Thailand" /><h3>Thailand</h3><a href="thailand-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/malaysia.jpg" alt="Malaysia" /><h3>Malaysia</h3><a href="malaysia-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/srilanka.jpg" alt="Sri Lanka" /><h3>Sri Lanka</h3><a href="srilanka-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/andaman.jpg" alt="Andaman & Nicobar" /><h3>Andaman & Nicobar</h3><a href="andaman-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/china.jpg" alt="China" /><h3>China</h3><a href="china-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/japan.jpg" alt="Japan" /><h3>Japan</h3><a href="japan-itinerary.html" class="btn">View Itinerary</a></div>
-
-      <!-- Middle East & Caucasus -->
-      <div class="destination-card"><img src="images/dubai.jpg" alt="Dubai" /><h3>Dubai, UAE</h3><a href="dubai-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/azerbaijan.jpg" alt="Azerbaijan" /><h3>Azerbaijan</h3><a href="azerbaijan-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/turkey.jpg" alt="Turkey" /><h3>Turkey</h3><a href="turkey-itinerary.html" class="btn">View Itinerary</a></div>
-
-      <!-- Africa -->
-      <div class="destination-card"><img src="images/morocco.jpg" alt="Morocco" /><h3>Morocco</h3><a href="morocco-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/southafrica.jpg" alt="South Africa" /><h3>South Africa</h3><a href="southafrica-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/kenya.jpg" alt="Kenya Safari" /><h3>Kenya Safari</h3><a href="kenya-itinerary.html" class="btn">View Itinerary</a></div>
-
-      <!-- Europe -->
-      <div class="destination-card"><img src="images/russia.jpg" alt="Russia" /><h3>Russia</h3><a href="russia-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/norway.jpg" alt="Norway" /><h3>Norway</h3><a href="norway-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/iceland.jpg" alt="Iceland" /><h3>Iceland</h3><a href="iceland-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/switzerland.jpg" alt="Switzerland" /><h3>Switzerland</h3><a href="swiss-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/paris.jpg" alt="Paris" /><h3>Paris, France</h3><a href="paris-itinerary.html" class="btn">View Itinerary</a></div>
-
-      <!-- Bonus Picks -->
-      <div class="destination-card"><img src="images/bali.jpg" alt="Bali" /><h3>Bali, Indonesia</h3><a href="bali-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/usa.jpg" alt="USA" /><h3>USA</h3><a href="usa-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/australia.jpg" alt="Australia" /><h3>Australia</h3><a href="australia-itinerary.html" class="btn">View Itinerary</a></div>
-      <div class="destination-card"><img src="images/singapore.jpg" alt="Singapore" /><h3>Singapore</h3><a href="singapore-itinerary.html" class="btn">View Itinerary</a></div>
-    </div>
+  <section class="page-intro">
+    <h1>Explore Our Destinations</h1>
+    <p>From iconic cities to hidden gems — browse curated itineraries across 20+ global hotspots.</p>
   </section>
 
-  <!-- Footer -->
+  <section class="destination-grid">
+    <div class="destination-card"><img src="images/paris.jpg" alt="Paris" /><h3>Paris</h3><a href="paris-itinerary.html" class="btn">View Itinerary</a></div>
+    <div class="destination-card"><img src="images/dubai.jpg" alt="Dubai" /><h3>Dubai</h3><a href="dubai-itinerary.html" class="btn">View Itinerary</a></div>
+    <div class="destination-card"><img src="images/thailand.jpg" alt="Thailand" /><h3>Thailand</h3><a href="thailand-itinerary.html" class="btn">View Itinerary</a></div>
+    <div class="destination-card"><img src="images/swiss.jpg" alt="Switzerland" /><h3>Switzerland</h3><a href="swiss-itinerary.html" class="btn">View Itinerary</a></div>
+    <!-- Add more destinations as needed -->
+  </section>
+
   <footer>
+    <p>📍 Baner, Pune &nbsp;|&nbsp; 📞 8855088738 &nbsp;|&nbsp; 📧 sales@globesafari.in</p>
     <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
-    <p>
-      📍 Baner, Pune, Maharashtra, India &nbsp;|&nbsp;
-      📞 <a href="tel:+918855088738">+91 88550 88738</a> &nbsp;|&nbsp;
-      📧 <a href="mailto:sales@globesafari.in">sales@globesafari.in</a>
-    </p>
+    <p>We craft raw, unforgettable travel experiences with transparency and care.</p>
   </footer>
+
 </body>
 </html>
