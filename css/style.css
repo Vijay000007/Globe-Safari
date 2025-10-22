@@ -82,6 +82,16 @@ body {
   font-weight: bold;
 }
 
+/* destination */
+.destination-card img {
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* Adjust this value as needed */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
 /* Services */
 .services, .qualities, .blogs, .query-form, .ratings {
   padding: 2rem;
