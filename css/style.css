@@ -20,6 +20,7 @@ body {
 
 .logo-left img {
   height: 80px;
+  width: auto;
 }
 
 .nav-links {
@@ -40,7 +41,7 @@ body {
   background-image: url('../images/home-hero.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
