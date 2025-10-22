@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GlobeSafari | Curated Travel Experiences</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank">
+    <img src="assets/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
+
   <!-- Header -->
   <header class="main-header">
     <div class="header-container">
@@ -18,95 +25,103 @@
       </div>
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="leisure.html">Leisure</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Leisure</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('images/home-hero.jpg'); background-size: cover; background-position: center;">
+  <section class="hero">
     <div class="overlay">
       <div class="hero-text">
         <h1>Your Journey, Our Expertise</h1>
-        <p>Curated travel for the discerning explorer</p>
-        <a href="contact.html" class="btn">Call us</a>
+        <p>Tailor-made travel experiences with unmatched transparency and care</p>
+        <input type="text" placeholder="Search your destination..." class="search-bar" />
+        <a href="tel:+918855088738" class="btn">Plan My Trip</a>
       </div>
     </div>
   </section>
 
-  <!-- About GlobeSafari -->
-  <section class="intro">
-    <h2>Why GlobeSafari?</h2>
-    <p>We’re a Pune-based travel company trusted by global clients for leisure and corporate travel. From honeymoons to MICE, we deliver seamless, personalized experiences with 24/7 support.</p>
-  </section>
-
-  <!-- Packages -->
-  <section class="features">
-    <div class="feature">
-      <h3>Leisure Packages</h3>
-      <p>Romantic escapes, family holidays, and adventure tours.</p>
-    </div>
-    <div class="feature">
-      <h3>Corporate Travel</h3>
-      <p>End-to-end business travel with cost control and concierge support.</p>
-    </div>
-    <div class="feature">
-      <h3>Custom Itineraries</h3>
-      <p>Tailored plans for your dream destinations and events.</p>
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">✈️ Flights & Hotels</div>
+      <div class="service-card">🧳 Custom Itineraries</div>
+      <div class="service-card">🛂 Visa Assistance</div>
+      <div class="service-card">🏢 Corporate & MICE Travel</div>
     </div>
   </section>
 
-  <!-- Destinations Grid -->
+  <!-- Popular Destinations -->
   <section class="destinations-list">
     <h2>Popular Destinations</h2>
     <div class="destination-grid">
-      <div class="destination-card">
-        <img src="images/paris.jpg" alt="Paris" />
-        <h3>Paris, France</h3>
-        <a href="paris-itinerary.html" class="btn">View Itinerary</a>
-      </div>
-      <div class="destination-card">
-        <img src="images/dubai.jpg" alt="Dubai" />
-        <h3>Dubai, UAE</h3>
-        <a href="dubai-itinerary.html" class="btn">View Itinerary</a>
-      </div>
-      <div class="destination-card">
-        <img src="images/thailand.jpg" alt="Thailand" />
-        <h3>Thailand</h3>
-        <a href="thailand-itinerary.html" class="btn">View Itinerary</a>
-      </div>
-      <div class="destination-card">
-        <img src="images/swiss.jpg" alt="Switzerland" />
-        <h3>Switzerland</h3>
-        <a href="swiss-itinerary.html" class="btn">View Itinerary</a>
-      </div>
-      <div class="destination-card">
-        <img src="images/bali.jpg" alt="Bali" />
-        <h3>Bali, Indonesia</h3>
-        <a href="bali-itinerary.html" class="btn">View Itinerary</a>
-      </div>
-      <div class="destination-card">
-        <img src="images/kenya.jpg" alt="Kenya Safari" />
-        <h3>Kenya Safari</h3>
-        <a href="kenya-itinerary.html" class="btn">View Itinerary</a>
-      </div>
+      <div class="destination-card"><img src="images/paris.jpg" alt="Paris" /><h3>Paris</h3></div>
+      <div class="destination-card"><img src="images/dubai.jpg" alt="Dubai" /><h3>Dubai</h3></div>
+      <div class="destination-card"><img src="images/thailand.jpg" alt="Thailand" /><h3>Thailand</h3></div>
+      <div class="destination-card"><img src="images/swiss.jpg" alt="Switzerland" /><h3>Switzerland</h3></div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="qualities">
+    <h2>Why Choose GlobeSafari</h2>
+    <ul>
+      <li>✨ Tailored packages built from scratch — not generic DMC bundles</li>
+      <li>💬 100% client satisfaction through trip customization</li>
+      <li>💰 Transparent pricing — no hidden charges</li>
+      <li>🌍 Direct tie-ups with airlines, hotels & local vendors</li>
+      <li>🛃 Visa expert team for hassle-free travel</li>
+      <li>📞 24×7 support for every traveler</li>
+    </ul>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="blogs">
+    <h2>Latest Blogs</h2>
+    <div class="blog-grid">
+      <div class="blog-card"><h3>Top 5 Honeymoon Spots</h3><p>Explore romantic escapes beyond the usual.</p></div>
+      <div class="blog-card"><h3>Corporate Offsite Planning</h3><p>Make your next team trip unforgettable.</p></div>
+      <div class="blog-card"><h3>Visa Tips for First-Time Travelers</h3><p>Everything you need to know before you fly.</p></div>
+    </div>
+  </section>
+
+  <!-- Query Form -->
+  <section class="query-form">
+    <h2>Plan Your Trip</h2>
+    <form action="mailto:sales@globesafari.in" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="email" name="Email" placeholder="Your Email" required />
+      <input type="tel" name="Phone" placeholder="Your Phone" required />
+      <input type="text" name="Destination" placeholder="Destination" />
+      <textarea name="Message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Query</button>
+    </form>
+  </section>
+
+  <!-- Ratings -->
+  <section class="ratings">
+    <h2>Trusted by Travelers</h2>
+    <div class="rating-logos">
+      <img src="assets/tripadvisor.png" alt="Tripadvisor Rating" />
+      <img src="assets/google-rating.png" alt="Google Rating" />
+      <img src="assets/trustpilot.png" alt="Trustpilot Rating" />
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
+    <p>📍 Baner, Pune &nbsp;|&nbsp; 📞 8855088738 &nbsp;|&nbsp; 📧 sales@globesafari.in</p>
     <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
-    <p>
-      📍 Baner, Pune, Maharashtra, India &nbsp;|&nbsp;
-      📞 <a href="tel:+918855088738">+91 88550 88738</a> &nbsp;|&nbsp;
-      📧 <a href="mailto:sales@globesafari.in">sales@globesafari.in</a>
-    </p>
+    <p>We craft raw, unforgettable travel experiences with transparency and care.</p>
   </footer>
+
 </body>
 </html>
