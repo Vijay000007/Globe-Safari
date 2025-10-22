@@ -1,280 +1,280 @@
-/* Reset & Base */
+/* ===========================
+   GlobeSafari Stylesheet
+   Author: Vijay Doke
+   Version: 2.0
+=========================== */
+
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
   line-height: 1.6;
   background-color: #fff;
-  color: #333;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  height: auto;
+  scroll-behavior: smooth;
 }
 
-/* Header */
-.main-header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 2rem;
-}
-.header-container {
+/* HEADER */
+header {
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media (max-width: 768px) {
-  .logo-left img {
-    height: 100px;
-  }
-}
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-.navbar .nav-links a {
-  color: #000;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.navbar .nav-links a:hover {
-  color: #0077cc;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Hero Section */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #004aad;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #004aad;
+}
+
+.cta-btn {
+  background: #004aad;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background: #003a86;
+  transform: translateY(-2px);
+}
+
+/* HERO SECTION */
 .hero {
-  background-image: url('../images/home-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  position: relative;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-.overlay {
-  padding: 2rem;
+  color: white;
   text-align: center;
-  width: 100%;
-}
-.hero-text h1,
-.hero-text p {
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-}
-.search-bar {
-  padding: 0.6rem;
-  width: 60%;
-  max-width: 400px;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 4px;
-}
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #000;
-  color: #fff;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background-color: #0077cc;
 }
 
-/* WhatsApp Floating Button */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* SECTION STYLES */
+.services,
+.destinations,
+.about,
+.contact,
+.corporate {
+  padding: 70px 40px;
+  text-align: center;
+  background-color: #f9fafc;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #004aad;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* GRID CARDS */
+.service-grid,
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0;
+  color: #004aad;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+}
+
+/* CONTACT FORM */
+form input,
+form textarea {
+  padding: 10px;
+  width: 80%;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* FOOTER */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 100;
 }
+
 .whatsapp-float img {
-  width: 50px;
-  height: 50px;
-}
-.whatsapp-tooltip {
-  position: absolute;
-  bottom: 60px;
-  right: 0;
-  background: #000;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  width: 55px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
-/* Features Section */
-.features {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.feature-grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.feature-card {
-  width: 250px;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  text-align: center;
-}
-.feature-card img {
-  width: 50px;
-  margin-bottom: 1rem;
+.whatsapp-float img:hover {
+  transform: scale(1.1);
 }
 
-/* Destinations */
-.destinations {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.destination-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.destination-card {
-  width: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-.destination-card img {
-  height: 200px;
-  object-fit: cover;
-}
-.destination-card h3 {
-  margin: 1rem 0;
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-/* Blog Preview */
-.blog-preview {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.blog-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.blog-card {
-  width: 300px;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  text-align: left;
-}
-
-/* Ratings Section */
-.ratings {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.rating-logos {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.rating-logos img {
-  height: 40px;
-}
-
-/* Footer */
-footer {
-  background: #f8f8f8;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-}
-footer p {
-  margin-bottom: 0.5rem;
-}
-
-/* Page Intro (About, Contact, etc.) */
-.page-intro {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-.page-intro h2 {
-  margin-bottom: 1rem;
-}
-
-/* Contact Form */
-.query-form {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-}
-.query-form input,
-.query-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.query-form button {
-  padding: 0.6rem 1.2rem;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .header-container {
+  header {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 15px 20px;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .feature-grid,
-  .destination-grid,
-  .blog-grid,
-  .rating-logos {
+
+  nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-/* Services */
-.services, .qualities, {
-  padding: 2rem;
-  background-color: #f5f5f5;
-  text-align: center;
-}
 
-.service-grid, {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
+  .hero {
+    height: 70vh;
+  }
 
-.service-card, {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .service-grid,
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+}
