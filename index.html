@@ -1,154 +1,153 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlobeSafari | Curated Travel Experiences</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="description" content="Explore the world with GlobeSafari — your trusted partner for leisure and corporate travel." />
+  <title>GlobeSafari | Explore the World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6;}
+    header {background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .logo {font-family: 'Playfair Display', serif; font-size: 28px; color: #004aad; font-weight: bold;}
+    nav ul {display: flex; list-style: none; gap: 25px;}
+    nav a {text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s;}
+    nav a:hover {color: #004aad;}
+    .cta-btn {background: #004aad; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: background 0.3s;}
+    .cta-btn:hover {background: #003a86;}
+    .hero {position: relative; background: url('images/hero.jpg') center/cover no-repeat; height: 85vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;}
+    .overlay {position: absolute; inset: 0; background: rgba(0,0,0,0.55);}
+    .hero-text {position: relative; z-index: 2;}
+    .hero-text h1 {font-size: 3rem; margin-bottom: 10px;}
+    .hero-text p {font-size: 1.2rem; margin-bottom: 20px;}
+    .services, .destinations, .about, .contact, .corporate {padding: 60px 40px; text-align: center;}
+    .section-title {font-family: 'Playfair Display', serif; font-size: 2rem; color: #004aad; margin-bottom: 20px;}
+    .service-grid, .destination-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+    .card {background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s;}
+    .card:hover {transform: translateY(-5px);}
+    .card img {width: 100%; height: 200px; object-fit: cover;}
+    .card h3 {margin: 15px 0; color: #004aad;}
+    .card p {padding: 0 15px 20px;}
+    footer {background: #004aad; color: white; text-align: center; padding: 20px;}
+    footer a {color: #fff; text-decoration: underline;}
+    .whatsapp-float {position: fixed; bottom: 20px; right: 20px; z-index: 100;}
+    .whatsapp-float img {width: 55px; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.2);}
+    @media (max-width:768px){
+      header {flex-direction: column;}
+      nav ul {flex-direction: column; align-items: center;}
+      .hero-text h1 {font-size: 2rem;}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank">
-  <div class="whatsapp-tooltip">Chat with us</div>
-  <img src="assets/whatsapp-icon.png" alt="WhatsApp" />
-</a>
+<header>
+  <div class="logo">GlobeSafari</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#leisure">Leisure Travel</a></li>
+      <li><a href="#corporate">Corporate Travel</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="#contact" class="cta-btn">Plan My Trip</a>
+</header>
 
-  <!-- Header -->
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo-left">
-        <a href="index.html">
-          <img src="assets/logo.png" alt="GlobeSafari Logo" />
-        </a>
-      </div>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="leisure.html">Leisure</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<section id="home" class="hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Explore the World with GlobeSafari</h1>
+    <p>From dream vacations to seamless business trips — we handle it all.</p>
+    <a href="#leisure" class="cta-btn">Start Exploring</a>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-text">
-        <h1>Your Journey, Our Expertise</h1>
-        <p>Tailor-made travel experiences with unmatched transparency and care</p>
-        <input type="text" placeholder="Search your destination..." class="search-bar" />
-        <a href="tel:+918855088738" class="btn">Plan My Trip</a>
-      </div>
+<section id="leisure" class="services">
+  <h2 class="section-title">Leisure Travel Experiences</h2>
+  <div class="service-grid">
+    <div class="card">
+      <img src="images/honeymoon.jpg" alt="Honeymoon" />
+      <h3>Honeymoon Tours</h3>
+      <p>Romantic getaways crafted for unforgettable memories.</p>
     </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">✈️ Flights & Hotels</div>
-      <div class="service-card">🧳 Custom Itineraries</div>
-      <div class="service-card">🛂 Visa Assistance</div>
-      <div class="service-card">🏢 Corporate & MICE Travel</div>
+    <div class="card">
+      <img src="images/family.jpg" alt="Family Holiday" />
+      <h3>Family Holidays</h3>
+      <p>Fun-filled vacations for families of all sizes.</p>
     </div>
-  </section>
-
-  <!-- Popular Destinations -->
-<section class="destinations-list">
-  <h2>Popular Destinations</h2>
-  <div class="destination-grid">
-    <div class="destination-card">
-      <img src="images/paris.jpg" alt="Paris" />
-      <h3>Paris, France</h3>
-      <a href="paris-itinerary.html" class="btn">View Itinerary</a>
-    </div>
-    <div class="destination-card">
-      <img src="images/dubai.jpg" alt="Dubai" />
-      <h3>Dubai, UAE</h3>
-      <a href="dubai-itinerary.html" class="btn">View Itinerary</a>
-    </div>
-    <div class="destination-card">
-      <img src="images/thailand.jpg" alt="Thailand" />
-      <h3>Thailand</h3>
-      <a href="thailand-itinerary.html" class="btn">View Itinerary</a>
-    </div>
-    <div class="destination-card">
-      <img src="images/swiss.jpg" alt="Switzerland" />
-      <h3>Switzerland</h3>
-      <a href="swiss-itinerary.html" class="btn">View Itinerary</a>
-    </div>
-    <div class="destination-card">
-      <img src="images/bali.jpg" alt="Bali" />
-      <h3>Bali, Indonesia</h3>
-      <a href="bali-itinerary.html" class="btn">View Itinerary</a>
-    </div>
-    <div class="destination-card">
-      <img src="images/kenya.jpg" alt="Kenya Safari" />
-      <h3>Kenya Safari</h3>
-      <a href="kenya-itinerary.html" class="btn">View Itinerary</a>
+    <div class="card">
+      <img src="images/adventure.jpg" alt="Adventure" />
+      <h3>Adventure Escapes</h3>
+      <p>Thrilling adventures from mountains to beaches.</p>
     </div>
   </div>
 </section>
 
-  <!-- Why Choose Us -->
-  <section class="qualities">
-    <h2>Why Choose GlobeSafari</h2>
-    <ul>
-      <li>✨ Tailored packages built from scratch — not generic DMC bundles</li>
-      <li>💬 100% client satisfaction through trip customization</li>
-      <li>💰 Transparent pricing — no hidden charges</li>
-      <li>🌍 Direct tie-ups with airlines, hotels & local vendors</li>
-      <li>🛃 Visa expert team for hassle-free travel</li>
-      <li>📞 24×7 support for every traveler</li>
-    </ul>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="blogs">
-    <h2>Latest Blogs</h2>
-    <div class="blog-grid">
-      <div class="blog-card"><h3>Top 5 Honeymoon Spots</h3><p>Explore romantic escapes beyond the usual.</p></div>
-      <div class="blog-card"><h3>Corporate Offsite Planning</h3><p>Make your next team trip unforgettable.</p></div>
-      <div class="blog-card"><h3>Visa Tips for First-Time Travelers</h3><p>Everything you need to know before you fly.</p></div>
+<section id="corporate" class="corporate">
+  <h2 class="section-title">Corporate Travel Solutions</h2>
+  <p>Efficient, reliable, and cost-effective travel for your business.</p>
+  <div class="service-grid">
+    <div class="card">
+      <img src="images/business.jpg" alt="Corporate Flights" />
+      <h3>Flights & Hotels</h3>
+      <p>End-to-end booking and management for employees.</p>
     </div>
-  </section>
-
-  <!-- Query Form -->
-  <section class="query-form">
-    <h2>Plan Your Trip</h2>
-    <form action="mailto:sales@globesafari.in" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="email" name="Email" placeholder="Your Email" required />
-      <input type="tel" name="Phone" placeholder="Your Phone" required />
-      <input type="text" name="Destination" placeholder="Destination" />
-      <textarea name="Message" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn">Send Query</button>
-    </form>
-  </section>
-
-  <!-- Ratings -->
-  <section class="ratings">
-    <h2>Trusted by Travelers</h2>
-    <div class="rating-logos">
-      <a href="https://www.tripadvisor.com/Widgets" target="_blank"><img src="assets/tripadvisor.png" alt="Tripadvisor Rating" /></a>
-      <a href="https://shapo.io/google-review-badge-generator" target="_blank"><img src="assets/google-rating.png" alt="Google Rating" /></a>
-      <a href="https://help.trustpilot.com/s/article/TrustBox-widget-overview?language=en_US" target="_blank"><img src="assets/trustpilot.png" alt="Trustpilot Rating" /></a>
+    <div class="card">
+      <img src="images/visa.jpg" alt="Visa Support" />
+      <h3>Visa & Assistance</h3>
+      <p>Complete visa and documentation handling for your team.</p>
     </div>
-  </section>
+  </div>
+  <a href="#contact" class="cta-btn">Request a Corporate Quote</a>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>📍 Baner, Pune &nbsp;|&nbsp; 📞 8855088738 &nbsp;|&nbsp; 📧 sales@globesafari.in</p>
-    <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
-    <p>We craft raw, unforgettable travel experiences with transparency and care.</p>
-  </footer>
+<section id="destinations" class="destinations">
+  <h2 class="section-title">Popular Destinations</h2>
+  <div class="destination-grid">
+    <div class="card"><img src="images/thailand.jpg" alt="Thailand" /><h3>Thailand</h3></div>
+    <div class="card"><img src="images/bali.jpg" alt="Bali" /><h3>Bali</h3></div>
+    <div class="card"><img src="images/dubai.jpg" alt="Dubai" /><h3>Dubai</h3></div>
+    <div class="card"><img src="images/europe.jpg" alt="Europe" /><h3>Europe</h3></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="section-title">About GlobeSafari</h2>
+  <p>We are a passionate travel company dedicated to creating both leisure and corporate journeys that inspire and simplify. Our mission is to make travel seamless, affordable, and truly personalized.</p>
+  <a href="#contact" class="cta-btn">Let’s Start Planning</a>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <p>Talk to a travel expert today — we’ll help you design the perfect trip.</p>
+  <form onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+    <input type="text" placeholder="Your Name" required style="padding:10px;width:80%;margin:5px 0;border:1px solid #ccc;border-radius:5px;"><br>
+    <input type="email" placeholder="Your Email" required style="padding:10px;width:80%;margin:5px 0;border:1px solid #ccc;border-radius:5px;"><br>
+    <textarea placeholder="Your Message" required style="padding:10px;width:80%;height:100px;margin:5px 0;border:1px solid #ccc;border-radius:5px;"></textarea><br>
+    <button type="submit" class="cta-btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 GlobeSafari. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 
 </body>
 </html>
