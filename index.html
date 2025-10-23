@@ -88,9 +88,13 @@
 
     /* stories / experiences */
     .stories-grid{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
-    .story{width:320px;background:linear-gradient(180deg,#ffffff,#fafafa);border-radius:12px;overflow:hidden;border:1px solid #f0f0f0}
-    .story-media{height:160px;background:#eee}
-    .story-body{padding:12px}
+    .story { display: flex; flex-direction: column; overflow: hidden; /* prevent content overflow */
+  background: linear-gradient(180deg, #ffffff, #fafafa); border-radius: 12px; width: 320px; border: 1px solid #f0f0f0;}
+
+    .story-media img { width: 100%; height: 160px; /* match your .story-media height */ 
+  object-fit: cover; /* ensures the image covers the area without distortion */
+  border-top-left-radius: 12px; border-top-right-radius: 12px;}
+    .story-body { padding: 12px; display: flex; flex-direction: column; gap: 6px; /* adds small spacing between heading and paragraph */}
     .story h4{color:var(--accent);margin-bottom:6px}
     .story p{color:var(--muted);font-size:14px}
 
