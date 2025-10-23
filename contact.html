@@ -4,54 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | GlobeSafari</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank">
-    <img src="assets/whatsapp-icon.png" alt="WhatsApp" />
-  </a>
+<header>
+  <div class="logo">GlobeSafari</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leisure.html">Leisure Travel</a></li>
+      <li><a href="corporate.html">Corporate Travel</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="contact.html" class="cta-btn">Plan My Trip</a>
+</header>
 
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo-left">
-        <a href="index.html"><img src="assets/logo.png" alt="GlobeSafari Logo" /></a>
-      </div>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="leisure.html">Leisure</a></li>
-          <li><a href="corporate.html">Corporate</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="page-intro">
+<section class="hero" style="background: url('images/contact-hero.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-text">
     <h1>Contact GlobeSafari</h1>
-    <p>We’re here to help you plan your next journey. Reach out via phone, email, or submit a query below.</p>
-  </section>
+    <p>We’d love to hear from you. Let’s start planning your next adventure!</p>
+  </div>
+</section>
 
-  <section class="query-form">
-    <form action="mailto:sales@globesafari.in" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="email" name="Email" placeholder="Your Email" required />
-      <input type="tel" name="Phone" placeholder="Your Phone" required />
-      <input type="text" name="Destination" placeholder="Destination" />
-      <textarea name="Message" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn">Send Query</button>
-    </form>
-  </section>
+<section class="contact-info">
+  <h2 class="section-title">Get in Touch</h2>
+  <p>Whether you’re planning a leisure vacation or a business trip, our team is ready to assist you.</p>
+  <div class="service-grid">
+    <div class="card">
+      <h3>📞 Call Us</h3>
+      <p>+91 88550 88738</p>
+    </div>
+    <div class="card">
+      <h3>📧 Email</h3>
+      <p>sales@globesafari.in</p>
+    </div>
+    <div class="card">
+      <h3>📍 Location</h3>
+      <p>Baner, Pune, Maharashtra, India</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>📍 Baner, Pune &nbsp;|&nbsp; 📞 8855088738 &nbsp;|&nbsp; 📧 sales@globesafari.in</p>
-    <p>&copy; 2025 GlobeSafari. All rights reserved.</p>
-    <p>We craft raw, unforgettable travel experiences with transparency and care.</p>
-  </footer>
+<section class="contact-form">
+  <h2 class="section-title">Request a Quote</h2>
+  <p>Share your details, and we’ll send you a personalized itinerary and quotation.</p>
+  <form action="mailto:sales@globesafari.in" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Phone" placeholder="Your Phone" required>
+    <input type="text" name="Destination" placeholder="Preferred Destination">
+    <textarea name="Message" placeholder="Tell us more about your trip" required></textarea>
+    <button type="submit" class="cta-btn">Send Request</button>
+  </form>
+</section>
+
+<section class="map">
+  <h2 class="section-title">Our Location</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.365436597977!2d73.77987217533603!3d18.561301282540494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf02d193fb69%3A0x4571b4c1e97f519f!2sBaner%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1704290000000"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 GlobeSafari. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<a href="https://wa.me/918855088738" class="whatsapp-float" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
 
 </body>
 </html>
