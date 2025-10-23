@@ -35,13 +35,17 @@
     .brand-title{font-weight:700;color:var(--accent);font-size:18px}
     /* Header Layout Fix */
 header {
+  height: 70px; /* fixed header height */
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
-  align-items: center;
-  padding: 20px 60px;
-  background: transparent;
+  align-items: center; /* vertically center content */
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
+header .logo img {
+  height: 150px; /* logo height */
+  width: auto;  /* keeps aspect ratio */
+}
 /* Keep navigation in one horizontal line */
 nav ul {
   list-style: none;
