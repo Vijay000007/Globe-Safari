@@ -40,6 +40,8 @@
     .hamburger{display:none;font-size:22px;cursor:pointer;padding:6px}
 
     /* hero */
+    .hero-section {
+  background: url('hero.jpg') center/cover no-repeat;}
     .hero{min-height:66vh;display:flex;align-items:center;background:#fafafa;position:relative;padding:40px 0}
     .hero-inner{display:flex;gap:28px;align-items:center;justify-content:space-between;width:100%;max-width:var(--maxW);margin:0 auto;padding:0 18px}
     .hero-left{max-width:640px}
@@ -113,6 +115,13 @@
     .test h4{font-weight:700;color:var(--accent);font-size:15px}
 
     /* partners + ratings */
+    .ratings-container img {
+  height: 40px;
+  margin: 0 15px;
+  opacity: 0.8;
+  transition: 0.3s;}
+.ratings-container img:hover {
+  opacity: 1;}
     .partners{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center}
     .partners img{height:36px;opacity:0.95}
 
@@ -155,7 +164,7 @@
   <header>
     <div class="wrap header-row">
       <div class="brand">
-        <img src="https://via.placeholder.com/160x52?text=GlobeSafari" alt="GlobeSafari logo">
+        <img src="logo.png" alt="GlobeSafari Logo" style="height:80px; >
         <div class="brand-title">GlobeSafari</div>
       </div>
 
@@ -253,6 +262,7 @@
             <img loading="lazy" src="https://via.placeholder.com/900x600?text=Thailand+Adventure" alt="Thailand Adventure image">
           </a>
           <div class="dest-body">
+            <img src="images/thailand.jpg" alt="Thailand">
             <div class="dest-title">Thailand Adventure</div>
             <div class="dest-desc">Sunsets, islands and city life — a balanced starter for first-time international travellers.</div>
             <div class="dest-meta">
@@ -267,10 +277,12 @@
         </article>
 
         <article class="dest-card">
+          <img src="images/bali.jpg" alt="Bali">
           <a class="dest-media" href="#itineraries" onclick="openItin(event,'bali')">
             <img loading="lazy" src="https://via.placeholder.com/900x600?text=Bali+Escape" alt="Bali Escape image">
           </a>
           <div class="dest-body">
+            <img src="images/bali.jpg" alt="Bali">
             <div class="dest-title">Bali Escape</div>
             <div class="dest-desc">Rice terraces, beaches and culture — a romantic and relaxing getaway.</div>
             <div class="dest-meta">
@@ -285,6 +297,7 @@
         </article>
 
         <article class="dest-card">
+          <img src="images/vietnam.jpg" alt="Vietnam">
           <a class="dest-media" href="#itineraries" onclick="openItin(event,'vietnam')">
             <img loading="lazy" src="https://via.placeholder.com/900x600?text=Vietnam+Discovery" alt="Vietnam Discovery image">
           </a>
@@ -303,6 +316,7 @@
         </article>
 
         <article class="dest-card">
+          <img src="images/dubai.jpg" alt="Dubai">
           <a class="dest-media" href="#itineraries" onclick="openItin(event,'dubai')">
             <img loading="lazy" src="https://via.placeholder.com/900x600?text=Dubai+Highlights" alt="Dubai Highlights image">
           </a>
@@ -477,6 +491,11 @@
 
   <!-- PARTNERS & RATINGS -->
   <section id="partnersRatings" aria-label="partners and ratings">
+    <div class="ratings-container">
+  <img src="tripadvisor.png" alt="TripAdvisor">
+  <img src="google.png" alt="Google Reviews">
+  <img src="trustpilot.png" alt="Trustpilot">
+</div>
     <div class="wrap">
       <h2>Partners & Ratings</h2>
       <p class="sub">We work with established partners and maintain strong review scores.</p>
