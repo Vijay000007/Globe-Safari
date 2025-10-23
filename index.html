@@ -1,286 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GlobeSafari - Explore the world with our tour packages, flights, hotels, visa assistance, and corporate travel management.">
-<meta property="og:title" content="GlobeSafari - Travel Simplified">
-<meta property="og:description" content="Discover amazing destinations and personalized tour packages.">
-<meta property="og:image" content="hero.jpg">
-<title>GlobeSafari - Travel Simplified</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GlobeSafari — Travel Simplified</title>
+  <meta name="description" content="GlobeSafari - curated, budget-friendly and personalized tour packages. Book your next adventure." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#f6f6f7;
+      --muted:#6b6f76;
+      --accent:#2b2f33; /* dark grey for accents */
+      --accent-2:#7a7d81; /* lighter grey */
+      --maxW:1150px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{background:var(--bg);color:var(--accent);line-height:1.5;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%;height:auto}
 
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    /* page wrapper */
+    .wrap{max-width:var(--maxW);margin:0 auto;padding:0 18px;}
 
-<style>
-/* General Reset */
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; scroll-behavior: smooth; }
-body { line-height:1.6; color:#333; }
+    /* header */
+    header{position:sticky;top:0;background:rgba(255,255,255,0.98);backdrop-filter:saturate(120%) blur(4px);z-index:120;border-bottom:1px solid #f0f0f0}
+    .header-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:52px;width:auto}
+    .brand-title{font-weight:700;color:var(--accent);font-size:18px}
+    nav{display:flex;align-items:center;gap:16px}
+    .nav-links{display:flex;gap:14px;list-style:none}
+    .nav-links a{font-weight:500;color:var(--accent-2);padding:6px 8px;border-radius:8px}
+    .nav-links a:hover{color:var(--accent)}
+    .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;font-weight:700}
+    .hamburger{display:none;font-size:22px;cursor:pointer;padding:6px}
 
-/* Header */
-header {
-    position: sticky; top:0; background:#fff; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-.header-container { display:flex; justify-content:space-between; align-items:center; padding:15px 50px; }
-.logo img { height:60px; }
-nav { position:relative; }
-.nav-links { display:flex; list-style:none; transition:0.3s; }
-.nav-links li { margin-left:25px; }
-.nav-links li a { text-decoration:none; color:#333; font-weight:500; transition:0.3s; }
-.nav-links li a:hover { color:#1e90ff; }
+    /* hero */
+    .hero{min-height:66vh;display:flex;align-items:center;background:#fafafa;position:relative;padding:40px 0}
+    .hero-inner{display:flex;gap:28px;align-items:center;justify-content:space-between;width:100%;max-width:var(--maxW);margin:0 auto;padding:0 18px}
+    .hero-left{max-width:640px}
+    .hero h1{font-size:34px;line-height:1.05;color:var(--accent);margin-bottom:10px}
+    .hero p{color:var(--muted);margin-bottom:16px}
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{background:transparent;border:1px solid #e6e6e6;color:var(--accent-2)}
+    .search-box{display:flex;gap:6px;background:#fff;border-radius:999px;padding:6px 8px;align-items:center;border:1px solid #ececec}
+    .search-box input{border:0;outline:none;padding:8px 10px;width:260px}
+    .search-box button{background:var(--accent-2);color:#fff;border:0;padding:8px 12px;border-radius:999px;cursor:pointer}
 
-/* Hamburger */
-.hamburger { display:none; font-size:28px; cursor:pointer; }
+    .hero-right{width:420px;border-radius:14px;background:var(--card);padding:14px;box-shadow:0 6px 22px rgba(15,18,20,0.04)}
+    .hero-right h4{margin-bottom:10px;color:var(--accent);font-size:16px}
+    .quick-list{display:flex;flex-direction:column;gap:8px}
+    .quick-item{display:flex;gap:10px;align-items:center;padding:8px;border-radius:8px;background:#fff;border:1px solid #f1f1f1}
+    .quick-item small{color:var(--muted)}
 
-/* Hero Section */
-.hero-section {
-    height:90vh; background:url('hero.jpg') center center/cover no-repeat;
-    display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; position:relative;
-}
-.hero-section::after {
-    content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);
-}
-.hero-content { position:relative; z-index:1; max-width:700px; }
-.hero-content h1 { font-size:48px; margin-bottom:15px; animation: fadeInDown 1s ease forwards; }
-.hero-content p { font-size:20px; margin-bottom:20px; animation: fadeInUp 1s ease forwards; }
-.hero-buttons .btn { padding:10px 25px; margin:5px; background:#1e90ff; color:#fff; text-decoration:none; border-radius:5px; font-weight:500; transition:0.3s; }
-.hero-buttons .btn:hover { opacity:0.8; }
-.hero-buttons .btn-secondary { background:#ff6347; }
-.search-bar { margin-top:20px; display:flex; justify-content:center; animation: fadeIn 1s ease forwards; }
-.search-bar input { padding:10px; width:250px; border-radius:5px 0 0 5px; border:none; }
-.search-bar button { padding:10px 15px; border:none; background:#ff6347; color:#fff; border-radius:0 5px 5px 0; cursor:pointer; }
+    /* sections */
+    section{padding:48px 0}
+    h2{color:var(--accent);font-size:22px;margin-bottom:10px;text-align:center}
+    .sub{color:var(--muted);text-align:center;margin-bottom:18px}
 
-/* Sections */
-section { padding:60px 50px; text-align:center; }
-h2 { margin-bottom:40px; color:#1e90ff; }
+    /* services */
+    .services{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .service{width:210px;background:var(--card);border-radius:12px;padding:16px;text-align:center;transition:transform .2s, box-shadow .2s}
+    .service:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(12,14,20,0.04)}
+    .service .icon{font-size:28px;margin-bottom:8px}
+    .service h4{font-size:15px;margin-bottom:8px}
+    .service p{color:var(--muted);font-size:14px}
 
-/* Services */
-.services-container { display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; }
-.service-card { width:220px; padding:20px; border-radius:10px; background:#f8f8f8; transition:0.3s; }
-.service-card:hover { transform: translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-.service-card .icon { font-size:40px; margin-bottom:15px; }
+    /* featured destinations (product list) */
+    .featured-grid{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .dest-card{width:300px;border-radius:12px;overflow:hidden;background:#fff;border:1px solid #f0f0f0;transition:transform .25s,box-shadow .25s}
+    .dest-card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(10,12,15,0.05)}
+    .dest-media{height:180px;background:#efefef;overflow:hidden}
+    .dest-body{padding:14px}
+    .dest-title{font-weight:700;color:var(--accent);margin-bottom:8px}
+    .dest-desc{color:var(--muted);margin-bottom:10px;font-size:14px}
+    .dest-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .meta-left{color:var(--muted);font-size:13px}
+    .dest-actions{display:flex;gap:10px;justify-content:center}
 
-/* Itineraries */
-.itineraries-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.itinerary-card { width:300px; background:#f8f8f8; border-radius:10px; overflow:hidden; text-align:center; padding-bottom:15px; transition:0.3s; }
-.itinerary-card:hover { transform: translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-.itinerary-card img { width:100%; height:200px; object-fit:cover; }
-.itinerary-card .btn { margin-top:10px; }
+    /* stories / experiences */
+    .stories-grid{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .story{width:320px;background:linear-gradient(180deg,#ffffff,#fafafa);border-radius:12px;overflow:hidden;border:1px solid #f0f0f0}
+    .story-media{height:160px;background:#eee}
+    .story-body{padding:12px}
+    .story h4{color:var(--accent);margin-bottom:6px}
+    .story p{color:var(--muted);font-size:14px}
 
-/* Why Choose Us */
-.why-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
-.why-card { width:250px; padding:20px; background:#f0f8ff; border-radius:10px; transition:0.3s; }
-.why-card:hover { transform: translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-.why-card .icon { font-size:30px; margin-bottom:10px; }
+    /* itinerary cards (story-driven product) */
+    .itineraries-grid{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .trip-card{width:320px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #f0f0f0;transition:transform .25s,box-shadow .25s}
+    .trip-card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(10,12,15,0.05)}
+    .trip-media{height:190px;background:#f3f3f3;overflow:hidden}
+    .trip-body{padding:14px}
+    .trip-title{font-weight:700;color:var(--accent);margin-bottom:8px}
+    .trip-hook{color:var(--muted);font-size:14px;margin-bottom:10px;min-height:44px}
+    .trip-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+    .tag{background:#fbfbfb;padding:6px 8px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .rating{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .trip-actions{display:flex;gap:10px;justify-content:center}
 
-/* Testimonials */
-.testimonials-container { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; overflow:hidden; position:relative; }
-.testimonial-card { width:300px; background:#f8f8f8; border-radius:10px; padding:20px; }
+    /* testimonials */
+    .test-slider{display:flex;gap:14px;overflow:hidden;scroll-behavior:smooth;padding:6px}
+    .test{min-width:300px;background:#fff;border-radius:12px;padding:14px;border:1px solid #f0f0f0}
+    .test p{color:var(--muted);margin-bottom:8px}
+    .test h4{font-weight:700;color:var(--accent);font-size:15px}
 
-/* Partners */
-.partners-container { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; align-items:center; }
-.partners-container img { max-width:150px; transition:0.3s; }
-.partners-container img:hover { transform: scale(1.1); }
+    /* partners + ratings */
+    .partners{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center}
+    .partners img{height:36px;opacity:0.95}
 
-/* Ratings */
-.ratings-container div { margin:10px 0; font-size:18px; }
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:start;max-width:var(--maxW);margin:0 auto}
+    .contact-card{background:var(--card);padding:14px;border-radius:12px}
+    .contact-card input,.contact-card textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e9e9e9;margin-bottom:8px;outline:none}
+    .contact-card button{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
 
-/* Contact Form */
-.contact-section form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-.contact-section input, .contact-section textarea { padding:10px; border-radius:5px; border:1px solid #ccc; resize:vertical; }
-.contact-section button { padding:10px; border:none; background:#1e90ff; color:#fff; border-radius:5px; cursor:pointer; transition:0.3s; }
-.contact-section button:hover { opacity:0.8; }
-.form-message { margin-top:10px; color:green; font-weight:500; }
+    footer{background:#f5f6f7;padding:26px 0;margin-top:18px}
+    footer .foot-inner{display:flex;gap:24px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;max-width:var(--maxW);margin:0 auto;padding:0 18px}
+    footer a{color:var(--accent-2)}
 
-/* Footer */
-footer { background:#333; color:#fff; padding:30px 50px; display:flex; justify-content:space-between; flex-wrap:wrap; }
-.footer-links a, .footer-social a { display:block; color:#fff; text-decoration:none; margin-bottom:5px; }
-.footer-links a:hover, .footer-social a:hover { color:#1e90ff; }
+    /* modal */
+    .modal{display:none;position:fixed;inset:0;background:rgba(7,10,12,0.5);z-index:220;align-items:center;justify-content:center;padding:18px}
+    .modal .box{background:#fff;border-radius:12px;max-width:920px;width:100%;padding:18px;position:relative;box-shadow:0 20px 60px rgba(10,12,15,0.08)}
+    .modal .close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:20px;cursor:pointer}
 
-/* WhatsApp Floater */
-.whatsapp-floater { position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; font-size:30px; padding:15px; border-radius:50%; text-align:center; text-decoration:none; box-shadow:0 2px 10px rgba(0,0,0,0.3); transition:0.3s; }
-.whatsapp-floater:hover { transform: scale(1.1); }
+    /* whatsapp floater */
+    .wa{position:fixed;right:16px;bottom:16px;background:#25d366;height:56px;width:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.14);z-index:240;cursor:pointer;color:#fff;font-size:20px}
 
-/* Animations */
-@keyframes fadeInDown { 0% {opacity:0; transform:translateY(-20px);} 100% {opacity:1; transform:translateY(0);} }
-@keyframes fadeInUp { 0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);} }
-@keyframes fadeIn { 0% {opacity:0;} 100% {opacity:1;} }
-
-/* Mobile Styles */
-@media (max-width:768px) {
-    .nav-links { display:none; flex-direction:column; background:#fff; position:absolute; top:70px; right:50px; padding:15px; border-radius:5px; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-    .nav-links.active { display:flex; }
-    .hamburger { display:block; }
-
-    .services-container, .itineraries-container, .why-container, .testimonials-container { flex-direction:column; align-items:center; }
-    header .header-container { flex-direction:row; justify-content:space-between; padding:10px 20px; }
-}
-</style>
+    /* responsiveness */
+    @media (max-width:980px){
+      .hero-inner{flex-direction:column;align-items:flex-start;padding:24px}
+      .hero-right{width:100%}
+      .hero-left{width:100%}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .dest-card,.trip-card,.story{width:92%}
+      .search-box input{width:160px}
+    }
+  </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-<div class="header-container">
-    <div class="logo"><img src="logo.png" alt="GlobeSafari Logo"></div>
-    <nav>
+  <!-- HEADER -->
+  <header>
+    <div class="wrap header-row">
+      <div class="brand">
+        <img src="https://via.placeholder.com/160x52?text=GlobeSafari" alt="GlobeSafari logo">
+        <div class="brand-title">GlobeSafari</div>
+      </div>
+
+      <nav>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#itineraries">Itineraries</a></li>
-            <li><a href="#why">Why Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#featured">Destinations</a></li>
+          <li><a href="#itineraries">Itineraries</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <a class="cta" href="#contact">Get a Quote</a>
         <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </nav>
-</div>
-</header>
-
-<!-- Hero -->
-<section id="home" class="hero-section">
-<div class="hero-content">
-    <h1>Your Adventure, Our Expertise</h1>
-    <p>Discover amazing destinations and personalized tour packages</p>
-    <div class="hero-buttons">
-        <a href="#itineraries" class="btn">View Packages</a>
-        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </nav>
     </div>
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search destinations...">
-        <button onclick="searchDestination()">Search</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Travel like you mean it — stories, not just itineraries.</h1>
+        <p>Budget-friendly, personalized trips that focus on experience. Handpicked itineraries, trusted partners, and 24/7 support.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#featured">Explore Destinations</a>
+          <a class="btn btn-outline" href="#stories">Read Stories</a>
+        </div>
+
+        <div style="margin-top:12px;">
+          <div class="search-box" role="search" aria-label="Search destinations">
+            <input id="searchInput" placeholder="Search destinations e.g. Thailand, Bali" aria-label="Search destinations">
+            <button onclick="searchDestination()">Search</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-right" aria-hidden="true">
+        <h4>Quick Picks</h4>
+        <div class="quick-list">
+          <div class="quick-item"><strong>Fixed Departures</strong><small style="margin-left:auto;color:var(--muted)">Weekly</small></div>
+          <div class="quick-item"><strong>Private Trips</strong><small style="margin-left:auto;color:var(--muted)">Custom dates</small></div>
+          <div class="quick-item"><strong>Visa Support</strong><small style="margin-left:auto;color:var(--muted)">Hassle-free</small></div>
+        </div>
+      </aside>
     </div>
-</div>
-</section>
+  </section>
 
-<!-- Services -->
-<section id="services">
-<h2>Our Services</h2>
-<div class="services-container">
-    <div class="service-card"><div class="icon"><i class="fas fa-globe"></i></div><h3>Tour Packages</h3><p>Explore curated tours to amazing destinations around the world.</p></div>
-    <div class="service-card"><div class="icon"><i class="fas fa-plane"></i></div><h3>Flights & Hotels</h3><p>Book your flights and hotels easily with our trusted partners.</p></div>
-    <div class="service-card"><div class="icon"><i class="fas fa-passport"></i></div><h3>Visa Assistance</h3><p>Get hassle-free visa support for all your travel destinations.</p></div>
-    <div class="service-card"><div class="icon"><i class="fas fa-building"></i></div><h3>Corporate Travel</h3><p>Streamlined travel solutions for corporate clients of all sizes.</p></div>
-</div>
-</section>
+  <!-- SERVICES -->
+  <section id="services" aria-label="services">
+    <div class="wrap">
+      <h2>Our Services</h2>
+      <p class="sub">Everything you need for a smooth trip — packages, flights, visas and corporate travel.</p>
 
-<!-- Itineraries -->
-<section id="itineraries">
-<h2>Popular Itineraries</h2>
-<div class="itineraries-container">
-    <div class="itinerary-card"><img src="https://via.placeholder.com/300x200" alt="Thailand"><h3>Thailand Adventure</h3><a href="#" class="btn">Show Itinerary</a></div>
-    <div class="itinerary-card"><img src="https://via.placeholder.com/300x200" alt="Bali"><h3>Bali Escape</h3><a href="#" class="btn">Show Itinerary</a></div>
-    <div class="itinerary-card"><img src="https://via.placeholder.com/300x200" alt="Vietnam"><h3>Vietnam Discovery</h3><a href="#" class="btn">Show Itinerary</a></div>
-</div>
-</section>
+      <div class="services">
+        <div class="service">
+          <div class="icon">🌍</div>
+          <h4>Tour Packages</h4>
+          <p>Curated itineraries focused on experience and authenticity.</p>
+        </div>
 
-<!-- Why Choose Us -->
-<section id="why">
-<h2>Why Choose Us</h2>
-<div class="why-container">
-    <div class="why-card"><div class="icon">✔️</div><h3>500+ Happy Clients</h3><p>We have delivered amazing experiences to hundreds of travelers.</p></div>
-    <div class="why-card"><div class="icon">✔️</div><h3>100+ Itineraries</h3><p>Wide range of curated itineraries to suit every travel style.</p></div>
-    <div class="why-card"><div class="icon">✔️</div><h3>Expert Support</h3><p>Our team ensures smooth travel planning and assistance.</p></div>
-</div>
-</section>
+        <div class="service">
+          <div class="icon">✈️</div>
+          <h4>Flights & Hotels</h4>
+          <p>Trusted booking partners and verified stays.</p>
+        </div>
 
-<!-- Testimonials -->
-<section id="testimonials">
-<h2>Client Testimonials</h2>
-<div class="testimonials-container">
-    <div class="testimonial-card"><p>"Amazing service! Our Thailand trip was unforgettable."</p><h4>- Priya S.</h4></div>
-    <div class="testimonial-card"><p>"Very professional and quick responses. Highly recommended."</p><h4>- Rohit K.</h4></div>
-    <div class="testimonial-card"><p>"The Bali itinerary was perfect and hassle-free."</p><h4>- Anjali P.</h4></div>
-</div>
-</section>
+        <div class="service">
+          <div class="icon">🛂</div>
+          <h4>Visa Assistance</h4>
+          <p>Step-by-step document support to make visa easy.</p>
+        </div>
 
-<!-- Partners -->
-<section id="partners">
-<h2>Our Partners</h2>
-<div class="partners-container">
-    <img src="https://via.placeholder.com/150x50" alt="Partner 1">
-    <img src="https://via.placeholder.com/150x50" alt="Partner 2">
-    <img src="https://via.placeholder.com/150x50" alt="Partner 3">
-    <img src="https://via.placeholder.com/150x50" alt="Partner 4">
-</div>
-</section>
-
-<!-- Ratings -->
-<section class="ratings-section">
-<h2>Ratings</h2>
-<div class="ratings-container">
-    <div>TripAdvisor: ⭐⭐⭐⭐⭐</div>
-    <div>Google Reviews: ⭐⭐⭐⭐☆</div>
-    <div>Trustpilot: ⭐⭐⭐⭐⭐</div>
-</div>
-</section>
-
-<!-- Contact Form -->
-<section id="contact">
-<h2>Contact Us</h2>
-<form id="contactForm" onsubmit="submitForm(event)">
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="tel" placeholder="Phone" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit" class="btn">Submit</button>
-    <p id="formMessage" class="form-message"></p>
-</form>
-</section>
-
-<!-- Footer -->
-<footer>
-<div class="footer-container">
-    <div class="footer-info">
-        <p>GlobeSafari Travel Agency</p>
-        <p>Address: Pune, Maharashtra</p>
-        <p>Phone: 8855088738 | Email: sales@globesafari.in</p>
+        <div class="service">
+          <div class="icon">🏢</div>
+          <h4>Corporate Travel</h4>
+          <p>Managed programs for teams & events with clear reporting.</p>
+        </div>
+      </div>
     </div>
-    <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#itineraries">Itineraries</a>
-        <a href="#contact">Contact</a>
+  </section>
+
+  <!-- FEATURED DESTINATIONS (easy to add more cards) -->
+  <section id="featured" aria-label="featured destinations">
+    <div class="wrap">
+      <h2>Featured Destinations</h2>
+      <p class="sub">Handpicked trips to our most-loved destinations. Add more anytime — cards are simple to duplicate.</p>
+
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Destination card template: duplicate to add more -->
+        <article class="dest-card">
+          <a class="dest-media" href="#itineraries" onclick="openItin(event,'thailand')">
+            <img loading="lazy" src="https://via.placeholder.com/900x600?text=Thailand+Adventure" alt="Thailand Adventure image">
+          </a>
+          <div class="dest-body">
+            <div class="dest-title">Thailand Adventure</div>
+            <div class="dest-desc">Sunsets, islands and city life — a balanced starter for first-time international travellers.</div>
+            <div class="dest-meta">
+              <div class="meta-left">5N / 6D</div>
+              <div style="font-weight:700">From ₹35,000</div>
+            </div>
+            <div class="dest-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'thailand')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Thailand%20Adventure" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <a class="dest-media" href="#itineraries" onclick="openItin(event,'bali')">
+            <img loading="lazy" src="https://via.placeholder.com/900x600?text=Bali+Escape" alt="Bali Escape image">
+          </a>
+          <div class="dest-body">
+            <div class="dest-title">Bali Escape</div>
+            <div class="dest-desc">Rice terraces, beaches and culture — a romantic and relaxing getaway.</div>
+            <div class="dest-meta">
+              <div class="meta-left">6N / 7D</div>
+              <div style="font-weight:700">From ₹42,000</div>
+            </div>
+            <div class="dest-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'bali')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Bali%20Escape" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <a class="dest-media" href="#itineraries" onclick="openItin(event,'vietnam')">
+            <img loading="lazy" src="https://via.placeholder.com/900x600?text=Vietnam+Discovery" alt="Vietnam Discovery image">
+          </a>
+          <div class="dest-body">
+            <div class="dest-title">Vietnam Discovery</div>
+            <div class="dest-desc">Markets, bays and hills — a food & culture centric experience.</div>
+            <div class="dest-meta">
+              <div class="meta-left">7N / 8D</div>
+              <div style="font-weight:700">From ₹38,000</div>
+            </div>
+            <div class="dest-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'vietnam')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Vietnam%20Discovery" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <a class="dest-media" href="#itineraries" onclick="openItin(event,'dubai')">
+            <img loading="lazy" src="https://via.placeholder.com/900x600?text=Dubai+Highlights" alt="Dubai Highlights image">
+          </a>
+          <div class="dest-body">
+            <div class="dest-title">Dubai Highlights</div>
+            <div class="dest-desc">Skyscrapers, deserts and modern luxury — short & premium escapes.</div>
+            <div class="dest-meta">
+              <div class="meta-left">4N / 5D</div>
+              <div style="font-weight:700">From ₹45,000</div>
+            </div>
+            <div class="dest-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'dubai')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Dubai%20Highlights" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="footer-social">
-        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  </section>
+
+  <!-- ITINERARIES (story-driven cards) -->
+  <section id="itineraries" aria-label="itineraries">
+    <div class="wrap">
+      <h2>Popular Itineraries</h2>
+      <p class="sub">Short hooks, quick highlights and clear pricing — designed for scanning and conversion.</p>
+
+      <div class="itineraries-grid">
+        <!-- Thailand -->
+        <article class="trip-card">
+          <a class="trip-media" href="#" onclick="openItin(event,'thailand')">
+            <img loading="lazy" src="https://via.placeholder.com/1200x800?text=Thailand+Adventure" alt="Thailand Adventure">
+          </a>
+          <div class="trip-body">
+            <div class="trip-title">Thailand Adventure — 5N/6D</div>
+            <div class="trip-hook">Mix of islands, city life and local food — ideal for first-time explorers.</div>
+            <div class="trip-meta">
+              <div class="price">From ₹35,000</div>
+              <div style="color:var(--muted);font-size:13px">Group & Private</div>
+            </div>
+            <div class="tags">
+              <div class="tag">🏖 Beach</div>
+              <div class="tag">🌄 Trek</div>
+              <div class="tag">🍲 Food</div>
+            </div>
+            <div class="rating">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Tripadvisor_logo.svg" alt="Tripadvisor logo" loading="lazy" style="height:26px">
+              <div style="font-weight:700;color:var(--muted)">4.9 • 250+ reviews</div>
+            </div>
+            <div class="trip-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'thailand')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Thailand%20Adventure" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bali -->
+        <article class="trip-card">
+          <a class="trip-media" href="#" onclick="openItin(event,'bali')">
+            <img loading="lazy" src="https://via.placeholder.com/1200x800?text=Bali+Escape" alt="Bali Escape">
+          </a>
+          <div class="trip-body">
+            <div class="trip-title">Bali Escape — 6N/7D</div>
+            <div class="trip-hook">Rice terraces, sunsets and boutique stays — perfect for couples.</div>
+            <div class="trip-meta">
+              <div class="price">From ₹42,000</div>
+              <div style="color:var(--muted);font-size:13px">Small Groups</div>
+            </div>
+            <div class="tags">
+              <div class="tag">🏝 Beach</div>
+              <div class="tag">🌅 Sunset</div>
+              <div class="tag">🧘 Wellness</div>
+            </div>
+            <div class="rating">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo" loading="lazy" style="height:26px">
+              <div style="font-weight:700;color:var(--muted)">4.6 • 180+ reviews</div>
+            </div>
+            <div class="trip-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'bali')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Bali%20Escape" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Vietnam -->
+        <article class="trip-card">
+          <a class="trip-media" href="#" onclick="openItin(event,'vietnam')">
+            <img loading="lazy" src="https://via.placeholder.com/1200x800?text=Vietnam+Discovery" alt="Vietnam Discovery">
+          </a>
+          <div class="trip-body">
+            <div class="trip-title">Vietnam Discovery — 7N/8D</div>
+            <div class="trip-hook">Markets, Halong Bay and homestays — deep cultural immersion.</div>
+            <div class="trip-meta">
+              <div class="price">From ₹38,000</div>
+              <div style="color:var(--muted);font-size:13px">Local Guides</div>
+            </div>
+            <div class="tags">
+              <div class="tag">🏯 Culture</div>
+              <div class="tag">🏞 Nature</div>
+              <div class="tag">🍜 Food</div>
+            </div>
+            <div class="rating">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Trustpilot_logo.svg" alt="Trustpilot logo" loading="lazy" style="height:26px">
+              <div style="font-weight:700;color:var(--muted)">4.8 • 220+ reviews</div>
+            </div>
+            <div class="trip-actions">
+              <a class="btn btn-primary" href="#" onclick="openItin(event,'vietnam')">View Itinerary</a>
+              <a class="btn btn-outline" href="https://wa.me/918855088738?text=Interested%20in%20Vietnam%20Discovery" target="_blank">Chat</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
     </div>
-</div>
-</footer>
+  </section>
 
-<!-- WhatsApp Floater -->
-<a href="https://wa.me/918855088738?text=Hello%20GlobeSafari,%20I%20want%20to%20inquire%20about%20tour%20packages" class="whatsapp-floater" target="_blank">💬</a>
+  <!-- STORIES / EXPERIENCES -->
+  <section id="stories" aria-label="stories">
+    <div class="wrap">
+      <h2>Stories & Experiences</h2>
+      <p class="sub">Real moments from travellers — short stories that show the feeling of the trip.</p>
 
-<script>
-// Hamburger Menu
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
-}
+      <div class="stories-grid">
+        <article class="story">
+          <div class="story-media"><img loading="lazy" src="https://via.placeholder.com/900x600?text=Sunset+in+Phuket" alt="Sunset in Phuket"></div>
+          <div class="story-body">
+            <h4>Sunset dinners & new friends</h4>
+            <p>“We met other couples, shared a sunset dinner and ended the night dancing at a beach bar — memories for life.” — Priya</p>
+          </div>
+        </article>
 
-// Search function
-const destinations = ['thailand', 'bali', 'vietnam'];
-function searchDestination() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    if(destinations.some(d => input.includes(d))) {
-        window.location.href = '#itineraries';
-    } else {
-        alert('Destination not found. Please check our itineraries.');
+        <article class="story">
+          <div class="story-media"><img loading="lazy" src="https://via.placeholder.com/900x600?text=Rice+Terraces+Ubud" alt="Rice terraces Ubud"></div>
+          <div class="story-body">
+            <h4>Ubud mornings</h4>
+            <p>“Waking up to rice terraces and a slow breakfast changed how I travel — quiet and thoughtful.” — Rohit</p>
+          </div>
+        </article>
+
+        <article class="story">
+          <div class="story-media"><img loading="lazy" src="https://via.placeholder.com/900x600?text=Halong+Bay" alt="Halong Bay"></div>
+          <div class="story-body">
+            <h4>Halong Bay calm</h4>
+            <p>“The boat cruise felt like a private world — the guide knew the best photo spots.” — Anjali</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" aria-label="testimonials">
+    <div class="wrap">
+      <h2>Traveller Testimonials</h2>
+      <p class="sub">Short, authentic feedback from recent trips.</p>
+
+      <div class="test-slider" id="testSlider" aria-live="polite">
+        <div class="test">
+          <p>"Excellent planning and local partner. Nothing was left to chance."</p>
+          <h4>- Priya S., Bangkok</h4>
+        </div>
+        <div class="test">
+          <p>"Personal touches made our anniversary trip special. Highly recommended."</p>
+          <h4>- Rohit K., Bali</h4>
+        </div>
+        <div class="test">
+          <p>"Clear communication and great value — loved the food tours."</p>
+          <h4>- Anjali P., Vietnam</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS & RATINGS -->
+  <section id="partnersRatings" aria-label="partners and ratings">
+    <div class="wrap">
+      <h2>Partners & Ratings</h2>
+      <p class="sub">We work with established partners and maintain strong review scores.</p>
+
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+        <div class="partners" aria-hidden="true">
+          <img loading="lazy" src="https://via.placeholder.com/140x40?text=Airline" alt="Airline">
+          <img loading="lazy" src="https://via.placeholder.com/140x40?text=Hotel+Group" alt="Hotel">
+          <img loading="lazy" src="https://via.placeholder.com/140x40?text=Ground+Partner" alt="Ground">
+        </div>
+
+        <div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center">
+          <div style="text-align:center">
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Tripadvisor_logo.svg" alt="Tripadvisor logo" style="height:40px;margin-bottom:6px">
+            <div style="font-weight:800">4.9</div>
+          </div>
+
+          <div style="text-align:center">
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo" style="height:40px;margin-bottom:6px">
+            <div style="font-weight:800">4.6</div>
+          </div>
+
+          <div style="text-align:center">
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Trustpilot_logo.svg" alt="Trustpilot logo" style="height:40px;margin-bottom:6px">
+            <div style="font-weight:800">4.8</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="contact">
+    <h2 style="text-align:center">Get in Touch</h2>
+    <p class="sub">Tell us a little about your plan — we'll respond quickly with options and pricing.</p>
+
+    <div class="contact-grid">
+      <div>
+        <div style="max-width:780px;margin-bottom:10px">
+          <div style="font-weight:800;margin-bottom:6px">Let's plan your next trip</div>
+          <div style="color:var(--muted)">Fill the form or chat with us directly on WhatsApp.</div>
+        </div>
+
+        <div class="contact-card">
+          <input id="name" placeholder="Your name" aria-label="Your name">
+          <input id="email" placeholder="Email" aria-label="Email">
+          <input id="phone" placeholder="Phone or WhatsApp" aria-label="Phone">
+          <textarea id="message" rows="5" placeholder="Tell us what you want (destination, dates, budget)" aria-label="Message"></textarea>
+          <button onclick="submitForm()">Send Message</button>
+          <p id="formMsg" style="color:green;margin-top:8px"></p>
+        </div>
+      </div>
+
+      <aside style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--card);padding:14px;border-radius:12px">
+          <strong>Office</strong><br>Pune, Maharashtra
+        </div>
+        <div style="background:var(--card);padding:14px;border-radius:12px">
+          <strong>Phone</strong><br><a href="tel:+918855088738">8855088738</a>
+        </div>
+        <div style="background:var(--card);padding:14px;border-radius:12px">
+          <strong>Email</strong><br><a href="mailto:sales@globesafari.in">sales@globesafari.in</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-inner">
+      <div>
+        <div style="font-weight:900;margin-bottom:8px">GlobeSafari</div>
+        <div style="color:var(--muted);max-width:360px">Curated trips focused on experience, local partners and transparent pricing.</div>
+      </div>
+
+      <div>
+        <div style="font-weight:700;margin-bottom:8px">Quick links</div>
+        <div><a href="#featured">Destinations</a></div>
+        <div><a href="#itineraries">Itineraries</a></div>
+        <div><a href="#contact">Contact</a></div>
+      </div>
+
+      <div>
+        <div style="font-weight:700;margin-bottom:8px">Follow</div>
+        <div><a href="https://instagram.com/globesafari.in" target="_blank" rel="noopener">Instagram</a></div>
+        <div><a href="#" target="_blank" rel="noopener">Facebook</a></div>
+        <div><a href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floater -->
+  <div class="wa" role="button" aria-label="Chat on WhatsApp" onclick="window.open('https://wa.me/918855088738?text=Hi%20GlobeSafari,%20I%20need%20help%20planning%20a%20trip','_blank')">💬</div>
+
+  <!-- Itinerary modal -->
+  <div id="itinModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="box">
+      <button class="close" aria-label="Close itinerary" onclick="closeItin()">✕</button>
+      <div id="itinContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // mobile menu
+    function toggleMenu(){
+      const links = document.querySelector('.nav-links');
+      if(!links) return;
+      links.style.display = (links.style.display === 'flex') ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.background = '#fff';
+      links.style.position = 'absolute';
+      links.style.right = '18px';
+      links.style.top = '64px';
+      links.style.padding = '12px';
+      links.style.boxShadow = '0 8px 30px rgba(10,12,15,0.06)';
+      links.style.borderRadius = '10px';
     }
-}
 
-// Contact form
-function submitForm(event) {
-    event.preventDefault();
-    document.getElementById('formMessage').innerText = 'Thank you! Your message has been sent.';
-    document.getElementById('contactForm').reset();
-}
-</script>
+    // search
+    const destinations = ['thailand','bali','vietnam','dubai','phuket','manali','shimla'];
+    function searchDestination(){
+      const val = (document.getElementById('searchInput').value||'').toLowerCase().trim();
+      if(!val){ alert('Type a destination like "Thailand"'); return; }
+      const found = destinations.find(d => val.includes(d));
+      if(found){
+        document.querySelector('#itineraries').scrollIntoView({behavior:'smooth'});
+        return;
+      } else {
+        alert('Destination not found in current packages. Try "Thailand", "Bali", "Vietnam" or check back later.');
+      }
+    }
+
+    // contact form (frontend only)
+    function submitForm(){
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const out = document.getElementById('formMsg');
+      if(!name || !email || !phone || !msg){ out.style.color='crimson'; out.innerText='Please fill all fields'; return; }
+      out.style.color='green';
+      out.innerText='Thanks! We received your message and will contact you shortly.';
+      // reset
+      setTimeout(()=>{ document.getElementById('name').value=''; document.getElementById('email').value=''; document.getElementById('phone').value=''; document.getElementById('message').value=''; },800);
+      // To actually receive leads: connect to backend/email/Sheets/Formspree/Make/Integromat — I can set that up next.
+    }
+
+    // itinerary modal content
+    function openItin(e,key){
+      if(e) e.preventDefault();
+      const data = {
+        thailand:{
+          title:'Thailand Adventure — 5N/6D',
+          img:'https://via.placeholder.com/1200x700?text=Thailand+Adventure',
+          summary:'A mix of beaches (Phuket), islands (Phi Phi), and culture (Chiang Mai). Ideal for groups and couples.',
+          highlights:['Phuket sunset boat cruise','Phi Phi snorkeling','Chiang Mai food tour','Comfort hotels + transfers'],
+          price:'Starting ₹35,000 per person'
+        },
+        bali:{
+          title:'Bali Escape — 6N/7D',
+          img:'https://via.placeholder.com/1200x700?text=Bali+Escape',
+          summary:'Rice terraces, boutique stays and intimate experiences — an ideal romantic trip.',
+          highlights:['Ubud terrace walk','Nusa Penida excursion','Private sunset dinner','Boutique stays'],
+          price:'Starting ₹42,000 per person'
+        },
+        vietnam:{
+          title:'Vietnam Discovery — 7N/8D',
+          img:'https://via.placeholder.com/1200x700?text=Vietnam+Discovery',
+          summary:'From Hanoi to Halong Bay — markets, landscapes and food-focused experiences.',
+          highlights:['Halong Bay cruise','Hanoi food walk','Local homestay','Experienced local guides'],
+          price:'Starting ₹38,000 per person'
+        },
+        dubai:{
+          title:'Dubai Highlights — 4N/5D',
+          img:'https://via.placeholder.com/1200x700?text=Dubai+Highlights',
+          summary:'Skyscrapers, desert safari and premium shopping — quick luxury escapes.',
+          highlights:['Desert safari','Burj Khalifa visit','Marina cruise','Premium hotels'],
+          price:'Starting ₹45,000 per person'
+        }
+      };
+
+      const d = data[key] || data['thailand'];
+      const html = `
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <div style="flex:1 1 420px">
+            <img src="${d.img}" alt="${d.title}" style="width:100%;height:300px;object-fit:cover;border-radius:8px">
+          </div>
+          <div style="flex:1 1 360px">
+            <h2 style="color:var(--accent);margin-bottom:8px">${d.title}</h2>
+            <p style="color:var(--muted);margin-bottom:10px">${d.summary}</p>
+            <div style="margin-bottom:10px"><strong>Highlights:</strong>
+              <ul style="color:var(--muted);margin-top:8px">
+                ${d.highlights.map(h=>`<li>${h}</li>`).join('')}
+              </ul>
+            </div>
+            <div style="font-weight:800;margin-bottom:12px">${d.price}</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="https://wa.me/918855088738?text=Hi%20GlobeSafari,%20I%27m%20interested%20in%20${encodeURIComponent(d.title)}" target="_blank">Enquire via WhatsApp</a>
+              <a class="btn btn-outline" href="#contact" onclick="closeItin()">Contact Planner</a>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById('itinContent').innerHTML = html;
+      const modal = document.getElementById('itinModal');
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeItin(){ const modal = document.getElementById('itinModal'); modal.style.display='none'; modal.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
+
+    // simple testimonial auto-scroll
+    (function(){
+      const slider = document.getElementById('testSlider');
+      if(!slider) return;
+      let idx = 0;
+      setInterval(()=>{
+        idx = (idx + 1) % slider.children.length;
+        slider.scrollTo({left: slider.children[idx].offsetLeft - 8, behavior:'smooth'});
+      },4200);
+    })();
+
+    // accessibility: close modal with ESC
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeItin(); });
+
+    // ensure nav shows correctly on resize
+    window.addEventListener('resize', ()=>{
+      if(window.innerWidth > 720){
+        const links = document.querySelector('.nav-links');
+        if(links) links.style.display = 'flex';
+      } else {
+        const links = document.querySelector('.nav-links');
+        if(links) links.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
 </html>
