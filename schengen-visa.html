@@ -28,9 +28,9 @@ margin:auto;
 }
 
 .hero{
-background:url('visa-banner.jpg') centre 
+background:url('./images/visa-banner.jpg') centre 
   center/cover no-repeat;
-padding:140px 20px 100px;
+padding:220px 20px 140px;
 text-align:center;
 color:#fff;
 position:relative;
@@ -190,9 +190,26 @@ z-index:999;
 }
 
 .top-logo img{
-    height:100px;
+    height:120px;
     width:auto;
+  filter:drop-shadow(0 4px 10px
+                     rgba(0,0,0,0.5));
 }
+
+  .top-header{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:15px 40px;
+z-index:1000;
+}
+
+.logo{
+height:120px;
+width:auto;
+}
+  
 @media(max-width:768px){
 .hero h1{
 font-size:2.2rem;
@@ -211,9 +228,10 @@ font-size:2rem;
 
 <body>
 
-  <div class="top-logo">
+  <header class="top-header">
     <img src="logo.png" alt="Globesafari logo">
-      </div>
+  </header>
+    
 <section class="hero">
 <div class="container">
   
