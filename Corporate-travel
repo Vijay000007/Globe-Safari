@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GlobeSafari | Corporate Travel Management</title>
+
+<meta name="description" content="Premium Corporate Travel Management by GlobeSafari. Flights, Hotels, Visa, MICE, Insurance, Airport Transfers and Business Travel Solutions.">
+
+<meta name="keywords" content="Corporate Travel, Business Travel, Travel Management Company, GlobeSafari, Visa, Hotels, Flights">
+
+<meta name="author" content="GlobeSafari">
+
+<meta property="og:title" content="GlobeSafari Corporate Travel">
+<meta property="og:description" content="Complete Corporate Travel Management Solutions.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<style>
+
+:root{
+
+--primary:#3B82F6;
+--secondary:#FFB86B;
+--dark:#111111;
+--white:#ffffff;
+--light:#f8fafc;
+--gray:#6b7280;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#fff;
+color:#111;
+overflow-x:hidden;
+}
+
+section{
+padding:90px 8%;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+}
+
+h1,h2,h3{
+font-weight:700;
+}
+
+p{
+line-height:1.8;
+color:#555;
+}
+
+.btn{
+display:inline-block;
+padding:15px 34px;
+background:var(--primary);
+color:#fff;
+border-radius:50px;
+text-decoration:none;
+transition:.35s;
+font-weight:600;
+}
+
+.btn:hover{
+background:#111;
+transform:translateY(-3px);
+}
+
+.btn2{
+display:inline-block;
+padding:15px 34px;
+border:2px solid var(--primary);
+border-radius:50px;
+text-decoration:none;
+color:var(--primary);
+margin-left:15px;
+transition:.3s;
+font-weight:600;
+}
+
+.btn2:hover{
+background:var(--primary);
+color:#fff;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+z-index:999;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:800;
+color:#111;
+
+}
+
+.logo span{
+
+color:var(--primary);
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+nav ul li{
+
+margin-left:30px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+color:#111;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:var(--primary);
+
+}
+
+.menu{
+
+display:none;
+font-size:28px;
+cursor:pointer;
+
+}
+
+/* HERO */
+
+.hero{
+
+padding-top:170px;
+padding-bottom:100px;
+background:
+linear-gradient(135deg,#ffffff 0%,#eef5ff 50%,#fff8f2 100%);
+
+}
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:70px;
+align-items:center;
+
+}
+
+.hero h1{
+
+font-size:58px;
+line-height:1.2;
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:var(--primary);
+
+}
+
+.hero p{
+
+font-size:18px;
+margin-bottom:35px;
+
+}
+
+.hero-image{
+
+position:relative;
+
+}
+
+.hero-card{
+
+background:#fff;
+padding:35px;
+border-radius:25px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+.hero-card img{
+
+width:100%;
+border-radius:18px;
+
+}
+
+.badge{
+
+position:absolute;
+top:-20px;
+right:-20px;
+background:var(--secondary);
+padding:16px 22px;
+border-radius:50px;
+font-weight:700;
+color:#111;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+/* WHY */
+
+.why-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.why-card{
+
+background:#fff;
+padding:35px;
+border-radius:18px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+transition:.35s;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.why-card i{
+
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#eef5ff;
+color:var(--primary);
+font-size:28px;
+margin-bottom:25px;
+
+}
+
+.why-card h3{
+
+margin-bottom:12px;
+
+}
+
+/* SERVICES */
+
+.services{
+
+background:var(--light);
+
+}
+
+.service-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+.service{
+
+background:#fff;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.35s;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.service:hover{
+
+background:var(--primary);
+transform:translateY(-10px);
+
+}
+
+.service:hover h3,
+.service:hover p,
+.service:hover i{
+
+color:#fff;
+
+}
+
+.service i{
+
+font-size:36px;
+margin-bottom:20px;
+color:var(--primary);
+transition:.3s;
+
+}
+
+/* STATS */
+
+.stats{
+
+background:#111;
+color:#fff;
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+text-align:center;
+
+}
+
+.stat h2{
+
+font-size:48px;
+color:var(--secondary);
+
+}
+
+.stat p{
+
+color:#ddd;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.hero-grid,
+.why-grid,
+.service-grid,
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav ul{
+
+display:none;
+
+}
+
+.menu{
+
+display:block;
+
+}
+
+.hero-grid,
+.why-grid,
+.service-grid,
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.section-title h2{
+
+font-size:32px;
+
+}
+
+.btn2{
+
+display:block;
+margin:15px auto 0;
+
+}
+
+}
+
+.fade{
+
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+Globe<span>Safari</span>
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#testimonials">Testimonials</a></li>
+<li><a href="#faq">FAQ</a></li>
+
+</ul>
+
+<div class="menu">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<h1>
+Corporate Travel
+<span>Made Effortless.</span>
+</h1>
+
+<p>
+
+From executive travel and hotel bookings to business visas,
+MICE events and travel support — GlobeSafari simplifies every
+business journey with reliability, speed and dedicated account management.
+
+</p>
+
+<a href="#services" class="btn">
+Explore Services
+</a>
+
+<a href="https://wa.me/918855088738" class="btn2">
+Talk to an Expert
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="badge">
+
+24×7 Business Support
+
+</div>
+
+<div class="hero-card">
+
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Why Choose GlobeSafari</h2>
+
+<p>
+Reliable corporate travel solutions designed to reduce costs,
+save time and ensure seamless business travel experiences.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24×7 Assistance</h3>
+
+<p>
+Round-the-clock travel support for every business traveler.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Cost Optimisation</h3>
+
+<p>
+Smart travel planning with negotiated corporate rates.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-globe"></i>
+
+<h3>Worldwide Coverage</h3>
+
+<p>
+Business travel solutions across major global destinations.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-user-tie"></i>
+
+<h3>Dedicated Manager</h3>
+
+<p>
+Single point of contact for complete travel coordination.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services fade" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Corporate Travel Services</h2>
+
+<p>
+Everything your company needs under one roof.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service">
+<i class="fa-solid fa-plane"></i>
+<h3>Flights</h3>
+<p>Domestic & International Corporate Air Tickets.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-hotel"></i>
+<h3>Hotels</h3>
+<p>Corporate negotiated hotel bookings worldwide.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-passport"></i>
+<h3>Business Visa</h3>
+<p>Fast documentation and visa assistance.</p>
+</div>
+
+<div class="service">
+<i class="fa-solid fa-users"></i>
+<h3>MICE</h3>
+<p>Meetings, Incentives, Conferences & Events.</p>
+</div>
+
+        <div class="service">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Travel Insurance</h3>
+            <p>Comprehensive business travel insurance for employees worldwide.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-car-side"></i>
+            <h3>Airport Transfers</h3>
+            <p>Reliable chauffeur and airport pickup services across major cities.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Group Travel</h3>
+            <p>Corporate retreats, incentive tours and employee group movements.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Travel Reporting</h3>
+            <p>Expense tracking, policy compliance and travel analytics.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats fade">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+<h2 class="counter" data-target="500">0</h2>
+<p>Corporate Clients</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="35">0</h2>
+<p>Countries Covered</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="25000">0</h2>
+<p>Bookings Managed</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="24">0</h2>
+<p>Hours Support</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Industries -->
+
+<section id="industries" class="fade">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Industries We Serve</h2>
+
+<p>
+Tailored travel management solutions designed for businesses of every size.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>IT & Software</h3>
+<p>Employee travel, onsite deployments and global client visits.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-industry"></i>
+<h3>Manufacturing</h3>
+<p>Factory visits, vendor meetings and technical travel planning.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>Healthcare</h3>
+<p>Medical conferences, training programs and executive travel.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-building"></i>
+<h3>Finance</h3>
+<p>Secure and efficient travel solutions for banking professionals.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-graduation-cap"></i>
+<h3>Education</h3>
+<p>Academic delegations, conferences and institutional travel.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-store"></i>
+<h3>Retail</h3>
+<p>Regional meetings, vendor visits and expansion travel.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-helmet-safety"></i>
+<h3>Infrastructure</h3>
+<p>Project site visits and executive mobility management.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-earth-asia"></i>
+<h3>Startups</h3>
+<p>Flexible travel management for fast-growing companies.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Timeline -->
+
+<section class="services fade">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>How It Works</h2>
+
+<p>
+Simple, transparent and efficient travel management from start to finish.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<i class="fa-solid fa-comments"></i>
+<h3>01. Consultation</h3>
+<p>Understand your company's travel requirements and policy.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-file-signature"></i>
+<h3>02. Planning</h3>
+<p>Flights, hotels, visas and logistics planned efficiently.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-plane-departure"></i>
+<h3>03. Travel</h3>
+<p>Employees travel smoothly with 24×7 support available.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-chart-pie"></i>
+<h3>04. Reporting</h3>
+<p>Receive invoices, reports and travel insights after every trip.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section id="testimonials" class="fade">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Trusted by Businesses</h2>
+
+<p>
+Companies rely on GlobeSafari for dependable corporate travel services.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<p>
+"Professional service, quick response times and seamless travel coordination. Our employees never worry about business trips anymore."
+</p>
+
+<h3 style="margin-top:20px;">Operations Manager</h3>
+
+</div>
+
+<div class="why-card">
+
+<p>
+"Excellent visa guidance and last-minute flight support. Highly recommended for corporate travel management."
+</p>
+
+<h3 style="margin-top:20px;">HR Director</h3>
+
+</div>
+
+<div class="why-card">
+
+<p>
+"The dedicated account manager saved us countless hours while reducing our overall travel costs."
+</p>
+
+<h3 style="margin-top:20px;">Procurement Head</h3>
+
+</div>
+
+<div class="why-card">
+
+<p>
+"From conferences to international meetings, GlobeSafari handled everything flawlessly."
+</p>
+
+<h3 style="margin-top:20px;">Business Development Lead</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="fade">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about our corporate travel services.</p>
+        </div>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you provide dedicated account managers?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Every corporate client receives a dedicated relationship manager for bookings, support and reporting.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can GlobeSafari handle international business travel?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. We manage international flights, hotels, visas, insurance, airport transfers and complete travel coordination.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you support last-minute bookings?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. Our team is available 24×7 to assist with urgent business travel requirements.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can you manage conferences and MICE events?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. We organize Meetings, Incentives, Conferences and Exhibitions with end-to-end travel management.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+
+<section class="stats fade">
+
+    <div class="container" style="text-align:center;">
+
+        <h2 style="font-size:42px;margin-bottom:20px;color:#fff;">
+            Ready to Simplify Your Corporate Travel?
+        </h2>
+
+        <p style="color:#ddd;max-width:700px;margin:0 auto 35px;">
+            Partner with GlobeSafari for reliable business travel solutions, dedicated support and cost-effective corporate travel management.
+        </p>
+
+        <a href="https://wa.me/918855088738" class="btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            Chat on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer style="background:#0f172a;color:#fff;padding:70px 8% 30px;">
+
+    <div class="container">
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;">
+
+            <div>
+                <h2>Globe<span style="color:#3B82F6;">Safari</span></h2>
+                <p style="color:#cbd5e1;margin-top:20px;">
+                    Premium Corporate Travel Management Company helping businesses travel smarter with professional, reliable and cost-effective solutions.
+                </p>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom:20px;">Services</h3>
+                <p style="color:#cbd5e1;">Corporate Flights</p>
+                <p style="color:#cbd5e1;">Hotel Bookings</p>
+                <p style="color:#cbd5e1;">Business Visa</p>
+                <p style="color:#cbd5e1;">MICE</p>
+                <p style="color:#cbd5e1;">Travel Insurance</p>
+            </div>
+
+            <div>
+                <h3 style="margin-bottom:20px;">Contact</h3>
+                <p style="color:#cbd5e1;">📞 +91 88550 88738</p>
+                <p style="color:#cbd5e1;">📞 +91 74996 93775</p>
+                <p style="color:#cbd5e1;">✉ contact@globesafari.in</p>
+            </div>
+
+        </div>
+
+        <hr style="margin:40px 0;border-color:#334155;">
+
+        <p style="text-align:center;color:#94a3b8;">
+            © 2026 GlobeSafari. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Floating WhatsApp -->
+
+<a href="https://wa.me/918855088738"
+class="whatsapp-float"
+target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- Scroll Top -->
+
+<button id="topBtn">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<style>
+
+.faq-item{
+background:#fff;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+overflow:hidden;
+}
+
+.faq-question{
+width:100%;
+background:#fff;
+border:none;
+padding:22px;
+font-size:17px;
+font-weight:600;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:.4s;
+padding:0 22px;
+}
+
+.faq-answer p{
+padding-bottom:20px;
+}
+
+.whatsapp-float{
+position:fixed;
+right:25px;
+bottom:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+z-index:1000;
+}
+
+#topBtn{
+position:fixed;
+right:25px;
+bottom:100px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#3B82F6;
+color:#fff;
+cursor:pointer;
+display:none;
+font-size:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+</style>
+
+<script>
+
+// Counter Animation
+
+const counters=document.querySelectorAll('.counter');
+
+const runCounter=()=>{
+counters.forEach(counter=>{
+const target=+counter.dataset.target;
+const count=+counter.innerText;
+const increment=target/120;
+
+if(count<target){
+counter.innerText=Math.ceil(count+increment);
+setTimeout(runCounter,20);
+}else{
+counter.innerText=target.toLocaleString()+"+";
+}
+});
+};
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+runCounter();
+observer.disconnect();
+}
+});
+});
+
+observer.observe(document.querySelector('.stats'));
+
+// Fade Animation
+
+const fades=document.querySelectorAll(".fade");
+
+const fadeObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:.15});
+
+fades.forEach(el=>fadeObserver.observe(el));
+
+// FAQ
+
+document.querySelectorAll(".faq-question").forEach(btn=>{
+
+btn.onclick=function(){
+
+const answer=this.nextElementSibling;
+
+if(answer.style.maxHeight){
+answer.style.maxHeight=null;
+this.querySelector("i").className="fa-solid fa-plus";
+}
+else{
+
+document.querySelectorAll(".faq-answer").forEach(a=>a.style.maxHeight=null);
+document.querySelectorAll(".faq-question i").forEach(i=>i.className="fa-solid fa-plus");
+
+answer.style.maxHeight=answer.scrollHeight+"px";
+this.querySelector("i").className="fa-solid fa-minus";
+
+}
+
+};
+
+});
+
+// Scroll Button
+
+const topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>400){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+};
+
+topBtn.onclick=function(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+};
+
+</script>
+
+</body>
+</html>
